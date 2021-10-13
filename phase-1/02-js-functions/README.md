@@ -16,7 +16,7 @@
 
 ### Warm Up Question
 
-&emsp; 💡 What are functions and what do they help us accomplish?
+&emsp; 💡 What are JavaScript functions and why do we use them?
 
 ### Resources
 
