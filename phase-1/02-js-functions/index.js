@@ -91,8 +91,8 @@ console.log("------------------------");
         // If second() returns the larger number, return the string "Second Function is Higher!". 
         // If the functions return the same number, return the string "Draw!".
 
-        // Example: compareFunctions(() => 1, () => 10) ➞ "First Function is Higher!"
-        // Example: compareFunctions(() => 10, () => 1) ➞ "Second Function is Higher!"
+        // Example: compareFunctions(() => 1, () => 10) ➞ "Second Function is Higher!"
+        // Example: compareFunctions(() => 10, () => 1) ➞ "First Function is Higher!"
         // Example: compareFunctions(() => 10, () => 10) ➞ "Draw!"
 
 
