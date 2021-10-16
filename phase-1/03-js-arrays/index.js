@@ -267,7 +267,9 @@ console.log("------------------------");
 
         function sortWords(array) {
             
-            if (array !== []) {
+            console.log([] == []);
+
+            if (array.length !== 0) {
                 // sort() returns a new array, which we store in newArray
                 let newArray = array.sort((a, b) =>
                 
@@ -290,7 +292,7 @@ console.log("------------------------");
         }
 
         // ✅ Check Answer: 
-        console.log(sortWords(["i'm", "louis", "hi"]));
+        console.log(sortWords([]));
 
 // 🚧 Break Out Activity 2: Iterating Through Arrays
 
