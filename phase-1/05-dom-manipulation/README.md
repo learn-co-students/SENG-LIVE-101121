@@ -19,3 +19,5 @@
 &emsp; 💡 What's the DOM and how do we use JavaScript to manipulate it?
 
 ### Resources
+
+&emsp; [JavaScript DOM Manipulation](https://medium.com/@duonghoangvu/javascript-dom-manipulation-522ed8033d78)
