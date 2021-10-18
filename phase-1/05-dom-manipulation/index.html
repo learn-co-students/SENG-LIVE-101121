@@ -1,0 +1,56 @@
+<html lang="en">
+  	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script defer src="index.js"></script>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Pokédex - Starter Code</title>
+  	</head>
+
+  	<body>
+		<div id="lecture-goals">
+		<h1>DOM Manipulation - Learning Goals</h1>
+		<ul>
+			<li class="list-items">✅ Explore how to traverse the DOM tree</li>
+			<li class="list-items">✅ Create, read, update, and delete elements from the DOM by using:</li>
+			<ul>
+				<li>.querySelector()</li>
+				<li>.querySelectorAll()</li>
+				<li>.createElement()</li>
+				<li>.getElementById()</li>
+				<li>.getElementsByClassName()</li>
+				<li>.append()</li>
+				<li>.remove()</li>
+				<li>.innerHTML vs .innerText vs .textContent</li>
+			</ul>
+		</ul>
+		</div>
+
+    <h2>Warm Up Question</h2>
+    <ul>
+        <li class="list-items">💡 What's the DOM and how do we use JavaScript to manipulate it?</li>
+    </ul>
+
+    <hr>
+
+    <div id="header">
+      <h1>Build a Pokédex</h1>
+    </div>
+
+    <div id="poke-form-container">
+      <form id="poke-form">
+        <label class="form-label"><strong>Name: </strong></label>
+        <input type="text" id="name-input" />
+
+        <label class="form-label"><strong>Image: </strong></label>
+        <input type="text" id="img-input" />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <div id="poke-container"></div>
+
+  </body>
+</html>
