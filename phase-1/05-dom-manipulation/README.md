@@ -16,4 +16,8 @@
 
 ### Warm Up Question
 
-&emsp; 💡 What are the limitations of arrays that objects help us to address?
+&emsp; 💡 What's the DOM and how do we use JavaScript to manipulate it?
+
+### Resources
+
+&emsp; [JavaScript DOM Manipulation](https://medium.com/@duonghoangvu/javascript-dom-manipulation-522ed8033d78)
