@@ -121,7 +121,7 @@ console.log("------------------------");
         header.textContent = "No Breweries Found";
 
         div.append(icon, header);
-        container.appendChild(div);
+        brewList.appendChild(div);
     }
 
     // 1️⃣ Create a function (getAllBreweries) that:
