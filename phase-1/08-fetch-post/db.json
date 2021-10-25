@@ -1,0 +1,34 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "img": "./images/bulbasaur.png",
+      "likes": 4
+    },
+    {
+      "id": 2,
+      "name": "Ivysaur",
+      "img": "./images/ivysaur.png",
+      "likes": 21
+    },
+    {
+      "id": 3,
+      "name": "Venusaur",
+      "img": "./images/venusaur.png",
+      "likes": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "user": "Louis",
+      "content": "I love Bulbasaur!"
+    },
+    {
+      "id": 2,
+      "user": "Alice",
+      "content": "I love Ivysaur more!"
+    }
+  ]
+}
