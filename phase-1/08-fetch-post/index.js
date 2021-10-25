@@ -132,7 +132,7 @@ console.log("------------------------");
 
 		//  ✔️ Creates an "h3" (userName) and sets its text content as the Comment object's "name"
 
-		//  ✔️ Creates a "p" (userName) and sets its text cotent as the Comment object's "content"
+		//  ✔️ Creates a "p" (userContent) and sets its text cotent as the Comment object's "content"
 
         //  ✔️ Appends userName and userContent to commentCard
 
@@ -179,7 +179,7 @@ console.log("------------------------");
 	// ✅ Check Answer: 
 	function init() {
 		loadPokemons();
-		loadComments();
+		// loadComments();
 		commentsForm.addEventListener("submit", createComment);
 	}
 
