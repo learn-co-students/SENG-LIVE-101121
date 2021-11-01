@@ -150,8 +150,7 @@ You will be making an application for Flatirons Baking company! It should displa
   In App.js pass the CakeCards a flavor and price prop. 
     <ul>
         <li>
-        If you have them installed use react dev tools to view the props or a console.log in the CakeCard component. What do you observe?
-
+        If you have them installed use react dev tools to view the props or for the CakeCard component.  Otherwise console.log the props in CakeCard. What do you observe?
         </li>
     </ul>
   </li>
