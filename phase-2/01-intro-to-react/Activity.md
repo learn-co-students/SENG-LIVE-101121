@@ -110,7 +110,7 @@ You will be making an application for Flatirons Baking company! It should displa
     Add an `h1`tag for a cake name and a `p` tag for the cake price. Put in default data for now.
     </li>
     <li>
-    Export the CakeCard from its file with export default and import it into App.js 
+    Export the CakeCard from its file with export default and import it into App.js. Render the CakeCard component 3 times. 
     </li>
   </ul>
   </li>
