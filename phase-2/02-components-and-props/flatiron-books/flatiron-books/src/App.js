@@ -1,5 +1,7 @@
 import BookCard from "./BookCard";
-
+//TODO: Create a components folder
+//TODO: Create Header, Form, Genre and BookContainer components
+//TODO: Dynamically render BookCard in BookContainer using data from books.js
 function App() {
   console.log('hi from app')
   return (
