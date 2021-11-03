@@ -1,10 +1,10 @@
-function BookCard({bookObj:{title, author, genre="fiction", price=10}}){
+function BookCard(props){
     return(
         <>
-            <h1>{title}</h1>
-            <h3>{author}</h3>
-            <p>{genre}</p>
-            <p>{price}</p>
+            <h1>{props.bookObj.title}</h1>
+            <h3>{props.bookObj.author}</h3>
+            <p>{props.bookObj.genre}</p>
+            <p>{props.bookObj.price}</p>
         </>
     )
 }
