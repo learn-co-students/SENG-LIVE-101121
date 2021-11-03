@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 import Header from "./Header";
 import BookContainer from "./BookContainer";
@@ -5,17 +6,24 @@ import Form from "./Form"
 
 import {books, genres} from '../data/books'
 
-//TODO: Create a components folder
-//TODO: Create Header, Form, Genre and BookContainer components
-//TODO: Dynamically render BookCard in BookContainer using data from books.js
 function App() {
+const [bookList, setBookList] = useState(books)
+const [genreList, setGenreList] = useState(genres)
+const [count, setCounter] = useState(0)
+
+const handleCount = () => {
+  setCounter(currentState => currentState+1)
+  setCounter(currentState => currentState+1)
+
+  
+}
 
   return (
     <div>
+      <div onClick={handleCount}>Counter: {count}</div>
       <Header storeName="Barnes and Flatiron" slogan="Live Love Code"/>
       <Form/>
-      <BookContainer bookList={books} genresList={genres} />
- 
+      <BookContainer bookList={bookList} genresList={genreList} />
 
     </div>
   );
