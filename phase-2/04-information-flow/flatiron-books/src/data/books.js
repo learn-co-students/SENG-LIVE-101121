@@ -3,7 +3,8 @@ export const books = [
       id: 1,
       title: "Eloquent JavaScript: A Modern Introduction to Programming",
       author: "Marjin Haverbeke",
-   
+      genre: "technical",
+
       liked: true,
     
       reviews: [
