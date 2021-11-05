@@ -25,7 +25,7 @@ const handleGenre = (genreStr) => {
 
   return (
     <div>
-      <Header handleSayHi={handleSayHi} storeName="Barnes and Flatiron" slogan="Live Love Code"/>
+      <Header storeName="Barnes and Flatiron" slogan="Live Love Code"/>
       <Form/>
       <Search handleSearch={handleSearch}/>
       <BookContainer handleGenre={handleGenre} bookList={bookList} genresList={genreList} />
