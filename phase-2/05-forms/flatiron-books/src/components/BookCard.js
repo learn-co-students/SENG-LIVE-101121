@@ -1,5 +1,5 @@
 import {useState} from 'react'
-function BookCard({bookObj:{title, author, genre, price}}){
+function BookCard({bookObj:{title, author, genre, price}, bookObj, populateForm}){
     const [like, setLike] = useState(false)
 
 
@@ -13,6 +13,7 @@ function BookCard({bookObj:{title, author, genre, price}}){
             <p>{genre}</p>
             <p>{price}</p>
             <p onClick={handleClick}>{like?'♥':'♡'}</p>
+            <button onClick={() => populateForm(bookObj)}>Edit</button>
         </>
     )
 }

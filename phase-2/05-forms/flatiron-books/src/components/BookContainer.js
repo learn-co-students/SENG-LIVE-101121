@@ -1,11 +1,18 @@
 import Genre from "./Genre";
 import BookCard from "./BookCard"
-function BookContainer(props){
+function BookContainer({populateForm, genresList, bookList, handleGenre}){
+    const buildGenreList = () => {
+        const bookListG = bookList.map(book => book.genre.toUpperCase())
+        const genres = genresList.map(genre => genre.toUpperCase())
+        const joinList = [...genres, ...bookListG]
+        return [...new Set(joinList)]
+    }
+
     return(
         <>
-           <div style={{display:"flex"}}>{props.genresList.map(genre => <Genre handleGenre={props.handleGenre} genreStr={genre} key={genre}/> )} 
+           <div style={{display:"flex"}}>{buildGenreList().map(genre => <Genre handleGenre={handleGenre} genreStr={genre} key={genre}/> )} 
            </div>
-            {props.bookList.map(book => <BookCard bookObj={book} key={book.title} />)}
+            {bookList.map(book => <BookCard populateForm={populateForm} bookObj={book} key={book.title} />)}
         </>
     )
 }
