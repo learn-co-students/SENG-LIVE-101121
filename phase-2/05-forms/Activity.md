@@ -263,5 +263,9 @@ Test this out in the browser and add a new cake!
      </details>
      <br/>
 <br/>
-
+<h3>Bonus</h3>
+Note: This is a particularly hard and intentionally vague bonus. If you don't get to it, you're still in a good place. 
+<li>
+Add an edit feature to our app OR change the search form into a controlled form.
+</li>
 </ol>
