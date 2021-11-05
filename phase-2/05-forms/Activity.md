@@ -11,102 +11,134 @@ Feedback is an important part of improving as a developer, but it’s important 
 
 
 ## Deliverables
-Take some time to practice mapping out state and controlling the flow of information through your react app.
+Create a controlled form. 
 
->Note: If you get stuck, review 
-React Information Flow
+A controlled form is a form that derives its input values from state. It gives us more control of the form values opening up more functionality and flexibility. 
+
+>Note: If you get stuck, review React Forms Submit and BONUS: React Forms Abstraction from phase-2 canvas.
 
 <ol>
+<li>
+  Think about our search input from yesterday. Is this a controlled form, why or why not? If it's not a controlled form how would you make it a controlled form. 
+</li>
+  <details>
+      <summary>
+        solution 
+      </summary>
+      <hr/>
+      Our search is not quite a controlled form. The input is controlled however we aren't actually using our search input to filter the cakes. 
+      This input is not a full form. To make it a controlled form we will need to nest it in a form tag and add an onSubmit. 
+     <hr/>
+     </details>
+  <br/>
   <li>
-  Before coding lets take a look at the component hierarchy of a few react apps and figure out where we should define state.
-  <ul>
-    <li>This is a Travel App. While it will eventually have many state variables focus on events for this exercises. Multiple components need the same data. The data is only flowing one direction. From Parent to Child. Which component should we define the event state variable in? </li>
-        <img src="assets/image_1.png"
-        alt="travel app"
-        style="margin-right: 10px;" />
-     <details>
+  Create a Form component with an input for flavor, image, size, price and type submit.
+    <details>
       <summary>
         solution 
       </summary>
       <hr/>
-        <img src="assets/image_2.png"
-        alt="travel app solution"
-        style="margin-right: 10px;" />
-      <hr/>
-     </details>
-    <br/>
-    <li>Take a look at this book app. The bookList data in this app is needed by multiple components. It will need to go both from Parent to Child and from a Child to a Parent (through a callback). </li>
-    <img src="assets/image_3.png"
-        alt="book app"
-        style="margin-right: 10px;" />
-       <details>
-      <summary>
-        solution 
-      </summary>
-      <hr/>
-        <img src="assets/image_4.png"
-        alt="book app solution"
-        style="margin-right: 10px;" />
-      <hr/>
-     </details>
-     </br>
-    <li>This last app is the bakery app we’ve been working on. CakeList is needed in multiple components. The data will need to go both from Parent to Child and from a Child to a Parent (through a callback).</li>
-         <img src="assets/image_5.png"
-        alt="cake app"
-        style="margin-right: 10px;" />
-       <details>
-      <summary>
-        solution 
-      </summary>
-      <hr/>
-        <img src="assets/image_6.png"
-        alt="cake app solution"
-        style="margin-right: 10px;" />
-      <hr/>
-     </details>
-     </br>
-   </ul>
-  
-  <li>
-  Time to code. Use the search bar to filter the cakes by flavor. 
-  <ul>
-    <li>
-    In App import useState. Create a search state variable and setSearch method and pass the search variable down to the Search component through props. Build out the Search component to have an input with a value set to the search.
-    </li>
-          <details>
-      <summary>
-        solution 
-      </summary>
-      <hr/>
-       <img src="assets/image_13.png"
-     alt="search"
-     style="margin-right: 10px;" />
-        This example destructure search from props, but you can also access search with props.search if you don't wan't to destructure.
-      <img src="assets/image_7.png"
-     alt="search"
+      <img src="assets/image_1.png"
+     alt="form"
      style="margin-right: 10px;" />
      <hr/>
      </details>
   <br/>
     <li>
-    If we type anything in the search bar nothing happens, we need to add an event to capture the change event from our input. Create a handle search function in App, it should take the event as a param and call setSearch with the event.target.value
-    Note: This is an input using an onChange and does NOT have a onSubmit event so we don’t need event.preventDefault
+    Create state for each of our inputs 
+    NOTE: we will be refactoring this portion of the form. If you are comfortable with the onchange here feel free to skip to part 6.
     </li>
     <details>
     <summary>
       solution 
     </summary>
     <hr/>
-    <img src="assets/image_8.png"
-     alt="handle search"
+    <img src="assets/image_2.png"
+     alt="form and state pt1"
      style="margin-right: 10px;" />
      <hr/>
      </details>
      <br/>
      <li>
-    Pass this search handler to the search component through props
+    Set the value of each input to its matching state variable 
     </li>
     <details>
+    <summary>
+      solution 
+    </summary>
+    <hr/>
+    <img src="assets/image_3.png"
+     alt="set value to state"
+     style="margin-right: 10px;" />
+     <hr/>
+     </details>
+     <br/>
+     <li>
+    Create a handleChange for each input that updates the state onChange  
+    </li>
+    <details>
+    <summary>
+      solution 
+    </summary>
+    <hr/>
+    <img src="assets/image_4.png"
+     alt="inputs controlled"
+     style="margin-right: 10px;" />
+     <hr/>
+     </details>
+     <br/>
+    <li>
+    Test this out in the browser, our inputs should be working correctly and appearing in state. 
+    Lets refactor this to be a bit cleaner, create one formData object for state and delete the rest of the state variables
+    </li>
+    <details>
+    <summary>
+      solution 
+    </summary>
+    <hr/>
+    <img src="assets/image_6.png"
+     alt="passing handle search through props"
+     style="margin-right: 10px;" />
+     <hr/>
+     </details>
+     <br/>
+<br/>
+<li>
+Update the form values to use formData
+</li>
+     <details>
+    <summary>
+      solution 
+    </summary>
+    <hr/>
+    <img src="assets/image_7.png"
+     alt="passing handle search through props"
+     style="margin-right: 10px;" />
+     <hr/>
+     </details>
+     <br/>
+<br/>
+<li>
+Update all of the onChanges to point to single handleChange and delete the other handlers in Form.
+
+For now console.log the e.target.value to assure the handleChange is working.
+</li>
+     <details>
+    <summary>
+      solution 
+    </summary>
+    <hr/>
+    <img src="assets/image_8.png"
+     alt="passing handle search through props"
+     style="margin-right: 10px;" />
+     <hr/>
+     </details>
+     <br/>
+<br/>
+<li>
+Update the handleChange to be dynamic based on the event target. Hint: You'll need to use the spread operator here. 
+</li>
+     <details>
     <summary>
       solution 
     </summary>
@@ -117,11 +149,29 @@ React Information Flow
      <hr/>
      </details>
      <br/>
-     <li>
-    Add an onChange to the input and pass it the search handler 
-    Note: The event argument is coming from the onChange under the hood. We do not see it passed here and we don’t need to invoke the handler. onChange will do that for us.  
+<br/>
+<li>
+Check for understanding
+Confirm your understanding of our dynamic handleChange by discussing these questions with your group. 
+
+  <ul>
+    <li> 
+    What is e.target.name and e.target.value ?
     </li>
-    <details>
+    <li>
+    What is the spread operator and what is it doing here? {...formData}
+    </li>
+    <li>
+    What is [e.target.name]:e.target.value doing after formData?
+    </li>
+  </ul>
+</li>
+
+<li>
+Out inputs are now controlled. Lets add a cake to state!
+In App, create a handleAddCake function and pass it through props to the Form. For now the handler should only console log the parameter cake.
+</li>
+     <details>
     <summary>
       solution 
     </summary>
@@ -132,15 +182,11 @@ React Information Flow
      <hr/>
      </details>
      <br/>
-    <li>
-    Test your input in the browser and you should see some values showing up in the search bar.
-    Take a moment to review what we did.
-    How is our handleSearch getting the event from our search Component?
-    </li>
-    <li>
-    We will need to control cakes in state in order to filter it. SKIP THIS PART IF YOU DID THE BONUS YESTERDAY, add ‘cakeList’ to App and ‘setCakeList’ to state and set it to our cake data by default
-    </li>
-    <details>
+<br/>
+<li>
+In form destructor handle Add cake from props 
+</li>
+     <details>
     <summary>
       solution 
     </summary>
@@ -152,9 +198,9 @@ React Information Flow
      </details>
      <br/>
 <br/>
+
 <li>
-  In our handler call setCakeList and filter our cakes based on their flavor.
-  Note: This search bar is case sensitive, at the moment. Feel free to fix that as a challenge. 
+In Form, create a handleSubmit function that console.logs our formData
 </li>
      <details>
     <summary>
@@ -169,17 +215,57 @@ React Information Flow
      <br/>
 <br/>
 <li>
-Review what we did
-  <ul>
-    <li>
-    What does the .includes function do when it’s called on a string?
-    </li>
-     <li>
-    What is our filter doing?
-    </li>
-     <li>
-    Why are we using the e.target.value instead of the search state?
-    </li>
-  </ul>
+Add an onSubmit to the form tag and pass it handleSubmit
+</li>
+     <details>
+    <summary>
+      solution 
+    </summary>
+    <hr/>
+    <img src="assets/image_13.png"
+     alt="passing handle search through props"
+     style="margin-right: 10px;" />
+     <hr/>
+     </details>
+     <br/>
+<br/>
+<li>
+Add e.preventDefault and invoke handleAddCake with the form data passed as an argument. 
+
+</li>
+     <details>
+    <summary>
+      solution 
+    </summary>
+    <hr/>
+    <img src="assets/image_14.png"
+     alt="passing handle search through props"
+     style="margin-right: 10px;" />
+     <hr/>
+     </details>
+     <br/>
+<br/>
+
+<li>
+Back in App, in the handleAddCake function remove the console.log and add the new cake to the cakeList. Use the spread operator to make a copy of cakeList when adding the new cake. 
+
+Test this out in the browser and add a new cake!
+</li>
+     <details>
+    <summary>
+      solution 
+    </summary>
+    <hr/>
+    <img src="assets/image_15.png"
+     alt="passing handle search through props"
+     style="margin-right: 10px;" />
+     <hr/>
+     </details>
+     <br/>
+<br/>
+<h3>Bonus</h3>
+Note: This is a particularly hard and intentionally vague bonus. If you don't get to it, you're still in a good place. 
+<li>
+Add an edit feature to our app OR change the search form into a controlled form.
 </li>
 </ol>
