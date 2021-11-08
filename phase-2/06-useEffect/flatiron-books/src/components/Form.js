@@ -1,37 +1,6 @@
-import {useState} from 'react'
 
 function Form({handleSubmit, formData, handleChange}){
-    // const [title, setTitle] = useState('')
-    // const [formData, setFormData] = useState({
-    //     title:'',
-    //     author:'',
-    //     genre: '',
-    //     image: '',
-    //     price: '',
-    //     like: false
-    // })
 
-    // const handleChange = (e) => {
-    //     setFormData({...formData, [e.target.name]:e.target.value})
-    // }
-
-    // const clearForm = (e) => {
-
-    //     handleSubmit(e, formData)
-    //     setFormData({
-    //         title:'',
-    //         author:'',
-    //         genre: '',
-    //         image: '',
-    //         price: '',
-    //         like: false
-    //     })
-    // }
-
-    // const changeTitle = (e) => {
-    //     setTitle(e.target.value)
-    // }
-    console.log(formData)
     return(
         <form onSubmit={handleSubmit} style={{display:"flex", flexDirection:"column", width:"400px", margin:"auto"}}>
             <label>Title</label>
