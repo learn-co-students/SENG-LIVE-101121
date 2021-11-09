@@ -1,9 +1,9 @@
-function Header(props){
+function Header({storeName, slogan}){
     return(
 
         <div>
-            <h1>{props.storeName}</h1>
-            <h3>{props.slogan}</h3>
+            <h1>{storeName}</h1>
+            <h3>{slogan}</h3>
         </div>
     )
 }

@@ -98,21 +98,6 @@
       ]
     },
     {
-      "id": 7,
-      "title": "The Ravens Tower",
-      "author": " Ann Leckie",
-      "genre": "fantasy",
-      "liked": false,
-      "image": "https://m.media-amazon.com/images/I/812lac5vXoL._AC_UY218_.jpg",
-      "price": 11.99,
-      "reviews": [
-        {
-          "user_id": 103,
-          "content": "A unique and modern fantasy, saying it was inspired by hamlet is a very loose description that undersells the creativity and uniqueness of this story"
-        }
-      ]
-    },
-    {
       "id": 9,
       "title": "The Ravens Tower",
       "author": "N.K. Jeminsin",
