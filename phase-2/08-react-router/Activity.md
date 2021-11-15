@@ -42,7 +42,7 @@ In the root of your directory (The same level as the package.json) install react
 </li>
 <li>
  
- Run your server with the following `json-server --watch db.json --port 4000`
+ Run your server with the following `json-server --watch --port 4000 cakesData.json`
 
 </li>
  
