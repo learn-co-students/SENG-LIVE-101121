@@ -120,8 +120,6 @@ Next put one inside of the each iterating through movies (You'll need to break t
 
 ### Bonus
 
-
-
 8. Find a ticket by a name
 10. Filter out tickets by a specific title
 11. Update every ticket price by 1 dollar
