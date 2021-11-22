@@ -9,6 +9,8 @@
 
 If you see 'welcome to phase-3' print in your terminal you should be good to go.
 
+You'll have to re-run the app every time you run a command going forward. 
+
 # Deliverables 
 A local theater has asked you to make a CLI app to help them sell and track tickets. 
 
@@ -118,10 +120,11 @@ Next put one inside of the each iterating through movies (You'll need to break t
 
 ### Bonus
 
-Add more tickets to the ticket array for the following.
 
-9. Change tickets to a global variable stored outside of initialize_app
+
 8. Find a ticket by a name
-9. Add a ticket to the tickets array, once a ticket is created. 
 10. Filter out tickets by a specific title
 11. Update every ticket price by 1 dollar
+12. Move the puts, user input and case statement into a menu method that takes the movies array and tickets array as params. call menu inside of initialize_app
+13. At the end of every action return to the menu screen instead of exiting your app.
+14. add a ticket to the tickets array once it's created
