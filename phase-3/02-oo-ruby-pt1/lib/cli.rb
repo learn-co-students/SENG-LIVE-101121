@@ -24,13 +24,14 @@ def menu
         puts "goodbye"
     else
         puts try_again
-        initialize_app 
+        menu
     end
 end 
 
 #Lists all Patient info
 def list_patient_info 
-    #TODO use class vairable and instance method to print all patients
+    Patient.all.each{|p|  p.print_info}
+
     puts 'press any key to return to menu'
     user_input = gets.strip
 end 
@@ -60,7 +61,7 @@ def add_patient
         puts "#{patient_hash} is this correct? Y or N"
         correct = gets.strip
         if correct == 'Y' ||  correct == 'y'
-            #TODO create an instance of a Patient
+            Patient.new(species, name, age, owner, number)
         else
             add_patient 
         end 
