@@ -5,6 +5,7 @@ c2 = Clinic.create({clinic_name:'Seattle pets clinic', address:'5555 6th Seattle
 
 specialty = ['cats', 'dogs', 'small pets', 'farm animals']
 species = ['cat', 'dog', 'bird', 'fish', 'horse', 'chicken', 'cow', 'rat']
+
 10.times {
     Vet.create({vet_name:Faker::Name.name, specialty:specialty.sample})
 }
@@ -14,7 +15,7 @@ species = ['cat', 'dog', 'bird', 'fish', 'horse', 'chicken', 'cow', 'rat']
 }
 
 150.times {
-    Appointment.create(patient_id:Patient.all.sample.id, vet_id:Vet.all.sample.id, date:Date.new(2021,10,5))\
+    Appointment.create(patient_id:Patient.all.sample.id, vet_id:Vet.all.sample.id, date:Date.new(2021,10,5))
 }
 
 
