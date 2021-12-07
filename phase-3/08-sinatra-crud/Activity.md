@@ -8,7 +8,7 @@ Create sinatra routes
 >Note: `bundle exec rerun -b 'rackup config.ru'` will run your server.
 >Note: `npm start` inside the client folder will run your client server
 
-0. Clone down the starter code and run bundle and migrate. Verify your migration was successful. Review your models to verify the associations are set up correctly. Create some seeds manually or using the faker gem.  
+0. Clone down the starter code and run bundle and migrate. Verify your migration was successful. Review your models to verify the associations are set up correctly. Create some seeds manually or using the faker gem. Run npm i in your client folder.  
 
 
 1. In the controller folder create `tickets_controller.rb`. Create a `TicketsController` class that inherits from `ApplicationController`. 
