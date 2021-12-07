@@ -43,9 +43,8 @@ function App() {
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data)
       setPatients(patients.map(p => {
-        if(patient.id === data.id){
+        if(p.id === data.id){
           return data
         } else {
           return p
@@ -60,7 +59,7 @@ function App() {
       headers:{'Content-Type':'application/json'}
     })
     .then(res => res.json())
-    .then(data => {
+    .then(() => {
       setPatients(patients.filter(p => p.id !== id))
     })
   }
