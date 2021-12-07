@@ -53,7 +53,7 @@ Create sinatra routes
         solution 
       </summary>
       <hr/>        
-      <img src="assets/image_3.png" alt="titles" style="margin-right: 10px;" />
+      <img src="assets/image_4.png" alt="titles" style="margin-right: 10px;" />
       <hr/>
  </details>
 
