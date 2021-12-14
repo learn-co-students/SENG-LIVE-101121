@@ -27,4 +27,23 @@ class ItemsController < ApplicationController
     # rescue ActiveRecord::RecordNotFound
     #     render json: {error: "Item not found"}, status: :not_found
     # end
+
+    def create 
+        byebug
+        # item = Item.create(item_params, seller_id: current_user.id)
+        item = current_user.sold_items.create!(item_params)
+
+        if item.valid? 
+            render json: item, status_code: :created
+        else  
+            render json: item.errors.full_messages, status: :unprocessable_entity
+        end
+    end
+
+
+    private 
+
+    def item_params 
+        params.permit(:name, :price, :desc)
+    end
 end
