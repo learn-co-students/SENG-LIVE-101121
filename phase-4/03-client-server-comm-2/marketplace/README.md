@@ -32,11 +32,11 @@
 
 #### User can create an account by submitting a username, email and eventually a password
 
-1. What HTTP verb will be used? 'POST' 
-2. What will the path look like? '/users' 
-3. What controller and action will handle the request? users controller, create action 
+1. What HTTP verb will be used? 
+2. What will the path look like?  
+3. What controller and action will handle the request? 
 4. What validations are involved?
-5. How will this response be handled in the controller action? we want to first create the resource, then we want to check and see if its valid. if it is, we'll respond with a success, if its not, response of an error 
+5. How will this response be handled in the controller action? 
 
 inside `config/routes.rb`
 
@@ -68,9 +68,9 @@ end
 
 #### User can delete their account if the account belongs to the logged in user
 
-1. What HTTP verb will be used? delete
-2. What will the path look like? '/users/:id'
-3. What is the controller action? users#destroy
+1. What HTTP verb will be used? 
+2. What will the path look like? 
+3. What is the controller action? 
 4. Are there any dependencies to be concerned about upon destroying this resource?
 
 inside `config/routes.rb`
@@ -135,11 +135,11 @@ When we render a list of all items, we want to make sure to return only the item
 
 We will handle authorization in upcoming lessons
 
-1. What HTTP verb will be used? 'PATCH' 
-2. What will the path look like? 'items/:id'
-3. What controller and action will handle the request? update action itemscontroller 
+1. What HTTP verb will be used? 
+2. What will the path look like? 
+3. What controller and action will handle the request?  
 4. What validations are involved?
-5. How will this response be handled in the controller action? find the correct item using the params[:id]. update the item with new params from request. if statements, if it updated/meet the validations, then render success response. else: render some error 
+5. How will this response be handled in the controller action? 
 
 in `config/routes.rb`
 
