@@ -4,9 +4,9 @@ Together as a group, implement the following features into the API, carefully th
 
 1. [ ] Users can edit an existing review. Make sure that users can only edit the content attribute. 
 
-- What HTTP verb is required? 'PATCH' 
-- What will the defined path be? 'reviews/:id'
-- What controller and action is responsible for handling this request? 'reviews#update'
+- What HTTP verb is required? 
+- What will the defined path be? 
+- What controller and action is responsible for handling this request? 
 - What should the strong params include?
 
 To complete this exercise:
@@ -17,10 +17,9 @@ To complete this exercise:
 
 2. [ ] Users can delete an existing review. 
 
-- What HTTP verb is required? 'delete'
-- What will the defined path be?  'reviews/:id'
+- What HTTP verb is required? 
+- What will the defined path be?  
 - What controller and action is responsible for handling this request?
-'reviews#destroy'
 - What should the strong params include?
 
 To complete this exercise:
