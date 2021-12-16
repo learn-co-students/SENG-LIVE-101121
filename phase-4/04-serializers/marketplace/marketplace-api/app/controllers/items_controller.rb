@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 
     def index 
         item = Item.where(sold: false)
-        render json: item, status: :ok 
+        render json: item, status: :ok
     end
 
     def show 
