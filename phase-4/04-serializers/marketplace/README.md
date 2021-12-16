@@ -1,13 +1,5 @@
 # Lecture 4: Serializers
 
-If receiving the following error:
-
-```
-Your Ruby version is 2.6.1, but your Gemfile specified 2.7.4
-```
-
-run the command `rvm use 2.7.4`
-
 ### What is serialization?
 
 "Serialization is the process of translating data structures or objects into a format that can be stored or transmitted and reconstructed later."
