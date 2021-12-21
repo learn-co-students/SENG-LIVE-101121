@@ -9,10 +9,10 @@
 
 ### Important Talking Points
 
-- Cookies: a piece of information server to browser. they are stored on the client side. Cookies can be edited by a user, because they're stored as plain text. 
-- Sessions: signs and encrypts vulnerable data
-- Authentication: confirm something is valid, the user is who they say they are. 
-- Stateless HTTP: server does not maintain information about each client for all requests. Each request 
+- Cookies 
+- Sessions
+- Authentication
+- Stateless HTTP
 
 The current problem we are aiming to solve is that HTTP is stateless. It does not remember important information, particularly about a user, between requests. Each request is handled individually.
 
