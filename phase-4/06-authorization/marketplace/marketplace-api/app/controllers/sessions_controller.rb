@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+    skip_before_action :authenticate_user, only: [:create, :logout]
 
     def create 
         # find our user: email or username

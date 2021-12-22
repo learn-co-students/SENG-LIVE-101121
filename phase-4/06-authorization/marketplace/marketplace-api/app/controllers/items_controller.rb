@@ -1,8 +1,9 @@
 class ItemsController < ApplicationController
     before_action :find_item, only: [:show, :update, :destroy, :sold]
+    before_action :is_authorized, only: [:update, :destroy]
 
     def index 
-        item = Item.where(sold: false)
+        item = Item.includes(:categories).all
         render json: item, status: :ok
     end
 
@@ -42,4 +43,9 @@ class ItemsController < ApplicationController
     def find_item
         @item = Item.find(params[:id])
     end
+
+    def is_authorized
+        permitted = current_user.admin? || @item.seller == current_user
+        render json: "Accessibility is not permitted", status: :forbidden unless permitted
+      end
 end
