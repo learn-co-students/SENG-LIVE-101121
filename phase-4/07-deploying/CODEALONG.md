@@ -78,7 +78,7 @@ end
 Inside UsersController:
 
 ```rb
-class UsersController < ApplicationController
+class Api::UsersController < ApplicationController
     skip_before_action :authenticate_user
 
     def show

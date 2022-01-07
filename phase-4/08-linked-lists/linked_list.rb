@@ -80,4 +80,15 @@ class LinkedList
         output
     end
 
+    def search_list(data)
+        current_node = self.head
+        while current_node
+          if current_node.data == data
+            return current_node
+          end
+          current_node = current_node.next_node
+        end
+        "0 Results"
+      end
+
   end

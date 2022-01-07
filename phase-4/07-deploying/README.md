@@ -35,6 +35,8 @@
   - Run `brew install postgresql`
   - To start Postgres service: `brew services start postgresql`
 
+  If having issues with Postgresql on WSL please see: https://dakotaleemartinez.com/tutorials/postgresql-setup-on-ubuntu/
+
 ### What is Heroku
 
 "Heroku (Links to an external site.) is first and foremost a Platform as a Service (PaaS), which means they manage the hardware your code runs on as well as the software environment, with an aim of making it as simple as possible to take the code from your machine and run it on theirs. Heroku also has a free tier for developers to try out the service at no cost."
@@ -243,3 +245,9 @@ heroku open
 ```
 
 As your app is in production, if you run into any issues you can search the logs by running `heroku logs` 
+
+
+Commands to use with Heroku while debugging data:
+
+`heroku run rails c`
+`heroku run rails db:seed`
